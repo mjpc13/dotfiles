@@ -1,0 +1,40 @@
+2023-03-02 16:57:47.776 [info] Starting worker process with pid 87051 (type: fileWatcher, window: 1).
+2023-03-02 17:00:27.692 [info] Getting Manifest... ahmadawais.shades-of-purple
+2023-03-02 17:00:27.776 [info] Installing extension: ahmadawais.shades-of-purple
+2023-03-02 17:00:28.661 [info] Extracted extension to /home/mjpc13/.vscode-oss/extensions/.9adf0b62-47af-4dcb-9958-8591590fe5ae: ahmadawais.shades-of-purple
+2023-03-02 17:00:28.665 [info] Renamed to /home/mjpc13/.vscode-oss/extensions/ahmadawais.shades-of-purple-7.1.5-universal
+2023-03-02 17:00:28.667 [info] Extracting completed. ahmadawais.shades-of-purple
+2023-03-02 17:00:28.675 [info] Extension installed successfully: ahmadawais.shades-of-purple
+2023-03-02 17:01:31.577 [info] Getting Manifest... radiolevity.neofloss
+2023-03-02 17:01:31.666 [info] Installing extension: radiolevity.neofloss
+2023-03-02 17:01:32.572 [info] Extracted extension to /home/mjpc13/.vscode-oss/extensions/.45510da9-0492-4fd7-a05d-289bbd2f5fa8: radiolevity.neofloss
+2023-03-02 17:01:32.575 [info] Renamed to /home/mjpc13/.vscode-oss/extensions/radiolevity.neofloss-1.1.6-universal
+2023-03-02 17:01:32.576 [info] Extracting completed. radiolevity.neofloss
+2023-03-02 17:01:32.583 [info] Extension installed successfully: radiolevity.neofloss
+2023-03-02 17:02:09.683 [info] Getting Manifest... proxzima.sweetdracula
+2023-03-02 17:02:09.752 [info] Installing extension: proxzima.sweetdracula
+2023-03-02 17:02:10.583 [info] Extracted extension to /home/mjpc13/.vscode-oss/extensions/.9c51e499-a87d-48d9-8ad5-fc5a9db20159: proxzima.sweetdracula
+2023-03-02 17:02:10.592 [info] Renamed to /home/mjpc13/.vscode-oss/extensions/proxzima.sweetdracula-1.0.9-universal
+2023-03-02 17:02:10.597 [info] Extracting completed. proxzima.sweetdracula
+2023-03-02 17:02:10.618 [info] Extension installed successfully: proxzima.sweetdracula
+2023-03-02 17:02:47.967 [info] Getting Manifest... catppuccin.catppuccin-vsc
+2023-03-02 17:02:48.033 [info] Installing extension: catppuccin.catppuccin-vsc
+2023-03-02 17:02:48.794 [info] Extracted extension to /home/mjpc13/.vscode-oss/extensions/.3c93b536-bac0-4264-9e0f-c8205aab3d6d: catppuccin.catppuccin-vsc
+2023-03-02 17:02:48.797 [info] Renamed to /home/mjpc13/.vscode-oss/extensions/catppuccin.catppuccin-vsc-2.6.1-universal
+2023-03-02 17:02:48.799 [info] Extracting completed. catppuccin.catppuccin-vsc
+2023-03-02 17:02:48.807 [info] Extension installed successfully: catppuccin.catppuccin-vsc
+2023-03-02 17:03:32.716 [info] Getting Manifest... pkief.material-icon-theme
+2023-03-02 17:03:32.783 [info] Installing extension: pkief.material-icon-theme
+2023-03-02 17:03:34.013 [info] Extracted extension to /home/mjpc13/.vscode-oss/extensions/.f0d3ac46-6847-4db3-8044-7f4a3c0153f0: pkief.material-icon-theme
+2023-03-02 17:03:34.017 [info] Renamed to /home/mjpc13/.vscode-oss/extensions/pkief.material-icon-theme-4.24.0-universal
+2023-03-02 17:03:34.019 [info] Extracting completed. pkief.material-icon-theme
+2023-03-02 17:03:34.026 [info] Extension installed successfully: pkief.material-icon-theme
+2023-03-02 17:03:52.962 [info] Uninstalling extension from the profile: proxzima.sweetdracula@1.0.9 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
+2023-03-02 17:03:52.983 [info] Marked extension as uninstalled proxzima.sweetdracula-1.0.9-universal
+2023-03-02 17:03:53.418 [info] Successfully uninstalled extension from the profile proxzima.sweetdracula@1.0.9 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
+2023-03-02 17:04:02.720 [info] Uninstalling extension from the profile: ahmadawais.shades-of-purple@7.1.5 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
+2023-03-02 17:04:02.739 [info] Marked extension as uninstalled ahmadawais.shades-of-purple-7.1.5-universal
+2023-03-02 17:04:03.556 [info] Successfully uninstalled extension from the profile ahmadawais.shades-of-purple@7.1.5 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
+2023-03-02 17:04:12.662 [info] Uninstalling extension from the profile: radiolevity.neofloss@1.1.6 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
+2023-03-02 17:04:12.679 [info] Marked extension as uninstalled radiolevity.neofloss-1.1.6-universal
+2023-03-02 17:04:13.489 [info] Successfully uninstalled extension from the profile radiolevity.neofloss@1.1.6 vscode-userdata:/home/mjpc13/.vscode-oss/extensions/extensions.json
