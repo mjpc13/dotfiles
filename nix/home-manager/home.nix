@@ -1,28 +1,23 @@
-{
-  config,
-  pkgs,
-  ...
+{ config
+, pkgs
+, ...
 }: {
   home = {
     homeDirectory = "/home/mjpc13";
 
     packages = with pkgs; [
       #Dev tools
-      (nerdfonts.override { fonts = [ "FiraCode"]; })
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
       bash
       bat
       bottom
       cachix
-      docker
-      docker-compose
       fd
-      #git
       lazydocker
       lazygit
       navi
       ncdu
       neofetch
-      #neovim
       ranger
       ripgrep
       ripgrep-all
@@ -31,25 +26,29 @@
       wget
       xclip
       zsh
-      #kitty
 
       #Utility Apps
+      betterbird
       ffmpeg
       gimp
       slack
-      betterbird
 
       #Programming languages
-      cargo 
-      rustc
-      julia
+      cargo
       go
-      nodejs
+      julia
       nodePackages.pnpm
+      nodejs
+      rustc
 
       #Fixes
       nixgl.auto.nixGLDefault #Fixes OpenGL problems on Non-NixOS distros
-  
+
+
+      #Packages not worth it
+      # docker does not work well, need to check it
+      # docker-compose
+
     ];
 
     stateVersion = "22.11";
@@ -64,104 +63,105 @@
 
   fonts.fontconfig.enable = true;
 
-  
+
   programs = {
-      home-manager.enable = true;
+    home-manager.enable = true;
+    bash.enable = true;
 
-      #kitty = {
-      #  enable = true;
-      #  font.name = "FiraCode";
-      #  font.size = 13;
-      #  theme = "Gruvbox Dark";
-      #};
+    kitty = {
+      enable = true;
+      font.name = "FiraCode";
+      font.size = 13;
+      theme = "Gruvbox Dark";
+    };
 
-      zsh = {
-        enable = true;
-        enableCompletion = true; # enabled in oh-my-zsh
-        shellAliases = {
-          please = "sudo";
-          hms = "home-manager switch --impure --flake ~/.dotfiles/nix/home-manager#mjpc13";
-          hmu = "nix flake update ~.dotfiles/nix/home-manager && hms";
-          hml = "home-manager generations";
-          hmd = "nix store diff-closures";
-        };
-        
-        oh-my-zsh = {
-          enable = true;
-          #plugins = [ "zsh-autosuggestions" "zsh-syntax-highlighting"];
-          theme = "robbyrussell";
-        };
+    zsh = {
+      enable = true;
+      enableCompletion = true; # enabled in oh-my-zsh
+      shellAliases = {
+        please = "sudo";
+        hms = "home-manager switch --impure --flake ~/dotfiles/nix/home-manager#mjpc13";
+        hmu = "nix flake update ~/dotfiles/nix/home-manager && hms";
+        hml = "home-manager generations";
+        hmd = "nix store diff-closures";
       };
 
-      git = {
+      oh-my-zsh = {
         enable = true;
-        package = pkgs.gitAndTools.gitFull;
-        userName = "Mario Cristovao";
-        userEmail = "mjpc13@protonmail.com.com";
-        extraConfig = {
-          core.editor = "nvim";
-        };
+        #plugins = [ "zsh-autosuggestions" "zsh-syntax-highlighting"];
+        theme = "robbyrussell";
       };
+    };
 
-      neovim = {
-        enable = true;
-        viAlias = true;
-        vimAlias = true;
-        vimdiffAlias = true;
-        withPython3 = true;
-        
-        #Maybe in the future I'll use the plugins from here.
+    git = {
+      enable = true;
+      package = pkgs.gitAndTools.gitFull;
+      userName = "Mario Cristovao";
+      userEmail = "mjpc13@protonmail.com.com";
+      extraConfig = {
+        core.editor = "nvim";
+      };
+    };
 
-        plugins = with pkgs.vimPlugins; [
-          #comment-nvim
-          #coq-artifacts
-          #coq_nvim
-          #gitsigns-nvim
-          #gruvbox-nvim A theme i think
-          #leap-nvim
-          #lsp-status-nvim
-          #lsp_extensions-nvim
-          #lspkind-nvim
-          #nvim-colorizer-lua
-          #nvim-lspconfig
-          #nvim-tree-lua
-          nvim-treesitter
-          nvim-treesitter.withAllGrammars
-          #nvim-treesitter-endwise
-          #telescope-fzy-native-nvim
-          #telescope-nvim
-          #telescope-symbols-nvim
-          #telescope-ui-select-nvim
-          #vim-repeat
-          #vimtex
-          #which-key-nvim
-          #ros-nvim
-        ];
+    neovim = {
+      enable = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+      withPython3 = true;
+
+      #Maybe in the future I'll use the plugins from here.
+
+      plugins = with pkgs.vimPlugins; [
+        # comment-nvim
+        # coq-artifacts
+        # coq_nvim
+        # gitsigns-nvim
+        # gruvbox-nvim A theme i think
+        # leap-nvim
+        # lsp-status-nvim
+        # lsp_extensions-nvim
+        # lspkind-nvim
+        # nvim-colorizer-lua
+        # nvim-lspconfig
+        nvim-tree-lua
+        nvim-treesitter
+        nvim-treesitter-endwise
+        nvim-treesitter.withAllGrammars
+        # ros-nvim
+        # telescope-fzy-native-nvim
+        # telescope-nvim
+        # telescope-symbols-nvim
+        # telescope-ui-select-nvim
+        # vim-repeat
+        # vimtex
+        # which-key-nvim
+      ];
       # only loaded when neovim is launched!
       #  extraPackages = with pkgs; [
-          # lsp
-          #cmake-language-server
-          #docker-ls
-          #kotlin-language-server
-          #nodePackages.bash-language-server
-          #nodePackages.vscode-langservers-extracted
-          #nodePackages.yaml-language-server
-          #pyright
-          #rust-analyzer
-          #sumneko-lua-language-server
-          #texlab
-          #gopls
-          
-          # formatters
-          #black
-          #nixpkgs-fmt
-          #rustfmt
+      # lsp
+      #cmake-language-server
+      #docker-ls
+      #kotlin-language-server
+      #nodePackages.bash-language-server
+      #nodePackages.vscode-langservers-extracted
+      #nodePackages.yaml-language-server
+      #pyright
+      #rust-analyzer
+      #sumneko-lua-language-server
+      #texlab
+      #gopls
+
+      # formatters
+      #black
+      #nixpkgs-fmt
+      #rustfmt
       #  ];
 
 
-      };
-
     };
+
+  };
 
 
 }
