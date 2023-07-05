@@ -47,7 +47,6 @@
 
       #Packages not worth it
       # docker does not work well, need to check it
-      # docker-compose
 
     ];
 
@@ -111,7 +110,6 @@
       withPython3 = true;
 
       #Maybe in the future I'll use the plugins from here.
-
       plugins = with pkgs.vimPlugins; [
         # comment-nvim
         # coq-artifacts
@@ -124,10 +122,10 @@
         # lspkind-nvim
         # nvim-colorizer-lua
         # nvim-lspconfig
-        nvim-tree-lua
-        nvim-treesitter
-        nvim-treesitter-endwise
-        nvim-treesitter.withAllGrammars
+        # nvim-tree-lua
+        # nvim-treesitter
+        # nvim-treesitter-endwise
+        # nvim-treesitter.withAllGrammars
         # ros-nvim
         # telescope-fzy-native-nvim
         # telescope-nvim
@@ -158,10 +156,10 @@
       #rustfmt
       #  ];
 
-
     };
 
   };
+
 
 
 }
